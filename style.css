@@ -1,0 +1,117 @@
+:root {
+    --primary: #7e2ce9;
+    --accent: #ec23c1;
+    --text: #333;
+    --bg: #f4f7f6;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* Navigation */
+.navbar { background: white; padding: 20px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: bold; color: var(--primary); }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.85rem; }
+
+/* Hero */
+.hero { background: var(--primary); color: white; padding: 80px 0; text-align: center; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
+.hero-tag { color: var(--accent); letter-spacing: 3px; text-transform: uppercase; font-size: 0.7rem; }
+
+/* Cards */
+.card-section { background: white; padding: 40px; margin: 30px 0; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.02); }
+.section-label { font-size: 0.7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+
+/* Video Placeholders */
+.video-placeholder { 
+    width: 100%; 
+    aspect-ratio: 16/9; 
+    background: #6210e6; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #fff; 
+    font-size: 0.9rem; 
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px dashed var(--accent);
+}
+.video-placeholder.small { aspect-ratio: 4/3; font-size: 0.75rem; }
+
+
+/* Buttons */
+.btn { display: inline-block; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; font-size: 0.85rem; border: none; }
+.primary { background: var(--primary); color: white; }
+.secondary { background: #f0f2f5; color: var(--primary); }
+.outline { border: 1.5px solid var(--primary); color: var(--primary); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.btn-group { display: flex; gap: 10px; margin-top: 15px; }
+
+.download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+.actions { display: flex; gap: 20px; padding-top: 20px; border-top: 1px solid #eee; }
+.btn-link { color: var(--primary); font-weight: bold; text-decoration: none; border-bottom: 2px solid var(--accent); font-size: 0.85rem; }
+
+.dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.social-icons { display: flex; gap: 30px; justify-content: center; padding: 20px; }
+.social-icons a { text-decoration: none; color: var(--primary); font-weight: bold; }
+
+.main-footer { text-align: center; padding: 40px; color: #777; font-size: 0.8rem; }
+
+@media (max-width: 768px) { .dual-grid { grid-template-columns: 1fr; } }
+.revealed {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Active Nav Link Style */
+.nav-links a.active {
+    color: var(--accent) !important;
+    border-bottom: 2px solid var(--accent);
+}
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+}
+
+.video-container.small iframe {
+    aspect-ratio: 16 / 9;
+}
+
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between icons */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Social Icons Links */
+.social-icons a {
+    color: #333; /* Dark grey color */
+    font-size: 2rem; /* Icon size */
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Hover Effects */
+.social-icons a:hover {
+    transform: translateY(-5px); /* Moves up slightly on hover */
+    color: #c0392b; /* Change to your brand color (Red) */
+}
+
+/* Specific Brand Colors on Hover (Optional - adds nice color) */
+.social-icons a:hover .fa-whatsapp { color: #25D366; }
+.social-icons a:hover .fa-linkedin { color: #0077b5; }
+.social-icons a:hover .fa-github { color: #333; }
+.social-icons a:hover .fa-instagram { color: #E1306C; }
+.social-icons a:hover .fa-facebook { color: #1877F2; }
+.social-icons a:hover .fa-envelope { color: #c0392b; }
